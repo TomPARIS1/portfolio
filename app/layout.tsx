@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio de Tom",
-  description: "Portfolio moderne créé en NextJS",
+  title: "Tom Paris - Portfolio",
+  description: "Portfolio personnel & moderne développé en NextJS",
 };
 
 export default function RootLayout({
