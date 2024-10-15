@@ -4,12 +4,12 @@ import { Button } from './ui/moving-border'
 
 const Services = () => {
   return (
-    <div className="pt-12 w-full" id="services">
-      <h1 className="heading">
-        Mes <span className="text-purple">services</span>
+    <div className="w-full" id="services">
+      <h1 className="heading md:mt-16 sm:mt-24">
+        Mes <span className="text-gray-300">services</span>
       </h1>
 
-      <div className="w-full mt-20 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="w-full mt-14 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
@@ -19,14 +19,14 @@ const Services = () => {
             style={{
               //   add these two
               //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
+              background: "rgb(15, 15, 10)",
               backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                "linear-gradient(90deg, rgba(15,15,10,1) 0%, rgba(45,45,38,1) 100%)",
               // add this border radius to make it more rounded so that the moving border is more realistic
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
             // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-white/[0.1]"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
               <img
