@@ -2,14 +2,13 @@
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import { Globe } from "./globe";
 import { GridGlobe } from "./grid-globe";
 import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json"
 import MagicButton from "./magic-button";
 import { IoCopyOutline } from "react-icons/io5";
-import { SiJavascript, SiMysql, SiNextdotjs, SiPhp, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiJavascript, SiNextdotjs, SiPhp, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { Meteors } from "./meteors";
 
 export const BentoGrid = ({
