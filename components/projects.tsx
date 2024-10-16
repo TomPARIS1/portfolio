@@ -12,9 +12,9 @@ const Projects = () => {
             Mes {' '}
             <span className="text-neutral-400">projets récents</span>
         </h1>
-        <div className="flex flex-wrap items-center justify-center px-4 gap-x-12 gap-y-7 mt-5">
+        <div className="flex flex-wrap items-center justify-center px-4 gap-x-12 mt-5">
             {projects.map(({id, title, des, img, iconLists, link}) => (
-                <div key={id} className="lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw] mt-14">
+                <div key={id} className="lg:min-h-[32.5rem] h-[36rem] flex items-center justify-center sm:w-[570px] w-[80vw] mt-14">
                     {<CardContainer className="inter-var py-4">
                         <CardBody className="relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] bg-neutral-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto sm:h-[35rem] rounded-xl p-6 border  ">
                             <CardItem
