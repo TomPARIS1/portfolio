@@ -4,8 +4,6 @@ import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/data";
-import Image from "next/image";
-import { FaHome } from "react-icons/fa";
 import Footer from "@/components/footer";
 
 export default function Home() {

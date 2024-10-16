@@ -4,9 +4,9 @@ import { Button } from './ui/moving-border'
 
 const Services = () => {
   return (
-    <div className="w-full" id="services">
-      <h1 className="heading md:mt-16 sm:mt-24">
-        Mes <span className="text-gray-300">services</span>
+    <div className="w-full md:mt-16 mt-24" id="services">
+      <h1 className="heading ">
+        Mes <span className="text-neutral-400">services</span>
       </h1>
 
       <div className="w-full mt-14 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -17,15 +17,11 @@ const Services = () => {
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
             style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(15, 15, 10)",
+              background: "rgb(23,23,23)",
               backgroundColor:
-                "linear-gradient(90deg, rgba(15,15,10,1) 0%, rgba(45,45,38,1) 100%)",
-              // add this border radius to make it more rounded so that the moving border is more realistic
+                "linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(64,64,64,1) 100%)",
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
-            // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-white/[0.1]"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">

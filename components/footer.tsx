@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col items-center">
             
             <h1 className="heading lg:max-w-[45vw]">
-                Envie de <span className="text-gray-300">donner vie</span> à vos idées ?
+                Envie de <span className="text-neutral-400">donner vie</span> à vos idées ?
             </h1>
             <p className="text-white-200 md:mt-10 my-5 text-center">Contactez-moi et voyons comment je peux vous aider à atteindre vos objectifs.</p>
             

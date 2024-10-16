@@ -63,13 +63,13 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 bg-neutral-900",
         className
       )}
       style={{
-        background: "rgb(15, 15, 10)",
+        background: "rgb(23,23,23)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(15,15,10,1) 0%, rgba(45,45,38,1) 100%)",
+          "linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(64,64,64,1) 100%)",
       }}
     >
       <div className={`${id === 4 && "flex justify-center"} h-full`}>
@@ -127,7 +127,7 @@ export const BentoGridItem = ({
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[rgb(25,25,15)] border border-white/[0.1] flex items-center justify-between mb-2"
+                    lg:opacity-100 rounded-lg text-center bg-[rgb(13,13,13)] border border-white/[0.1] flex items-center justify-between mb-2"
                   >
                     <div className="pr-2">{item.icon}</div>
                     <p>{item.title}</p>

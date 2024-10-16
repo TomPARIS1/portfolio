@@ -15,7 +15,7 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
   useEffect(() => {
     animate(
       "span",
@@ -37,7 +37,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className={`${idx > 4 ? 'text-gray-300' : 'dark:text-white text-black' } opacity-0`}
+              className={`${idx > 4 ? 'text-neutral-400' : 'dark:text-white text-black' } opacity-0`}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
