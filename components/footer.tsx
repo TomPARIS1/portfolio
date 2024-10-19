@@ -1,6 +1,4 @@
 import React from 'react'
-import MagicButton from './ui/magic-button'
-import { FaLocationArrow } from 'react-icons/fa6'
 import { socialMedia } from '@/data'
 import { ContactForm } from './ui/contact-form'
 
