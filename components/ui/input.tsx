@@ -4,7 +4,6 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 
-// tslint:disable-next-line:no-empty-interface
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
