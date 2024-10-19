@@ -9,7 +9,7 @@ export const navItems = [
     {
       id: 1,
       title: "Un nouveau monde",
-      description: "Récemment diplômé d'un BUT Informatique, je propose aujourd'hui mes services de développement en freelance. C'est pour moi une véritable occasion d'exprimer mes compétences, de donner vie à mes projets mais aussi de participer à de nouvelles expériences.",
+      description: "Récemment diplômé d'un BUT Informatique, je propose aujourd'hui mes services de développement. C'est pour moi une véritable occasion d'exprimer mes compétences, de donner vie à mes projets mais aussi de participer à de nouvelles expériences.",
       className: "lg:col-span-2 md:col-span-6 md:row-span-2 lg:min-h-[60vh]",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -88,28 +88,28 @@ export const navItems = [
     {
       id: 1,
       title: "Développement Back-End",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis urna augue.",
+      desc: "Conception et mise en œuvre de la logique serveur, des bases de données et des API pour assurer la performance et la sécurité de vos applications.",
       className: "md:col-span-2",
       thumbnail: "/terminal.png",
     },
     {
       id: 2,
       title: "Développement Front-End",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis urna augue.",
+      desc: "Création d'interfaces utilisateur intuitives et réactives, utilisant les dernières technologies pour offrir une expérience optimale sur tous les appareils.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/code.png",
     },
     {
       id: 3,
       title: "Développement Multi-Plateformes",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis urna augue.",
+      desc: "Développement d'applications qui fonctionnent parfaitement sur différentes plateformes (Web, iOS, Android), réduisant ainsi le temps et les coûts de développement.",
       className: "md:col-span-2", // change to md:col-span-2
       thumbnail: "/application-mobile.png",
     },
     {
       id: 4,
-      title: "Conseil",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis urna augue.",
+      title: "Support et Maintenance",
+      desc: "Assurez le bon fonctionnement de vos applications grâce à un service de support et de maintenance proactif, incluant mises à jour, corrections de bugs et optimisation des performances.",
       className: "md:col-span-2",
       thumbnail: "/conseil.png",
     },

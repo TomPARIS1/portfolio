@@ -2,6 +2,7 @@ import React from 'react'
 import MagicButton from './ui/magic-button'
 import { FaLocationArrow } from 'react-icons/fa6'
 import { socialMedia } from '@/data'
+import { ContactForm } from './ui/contact-form'
 
 const Footer = () => {
   return (
@@ -13,13 +14,7 @@ const Footer = () => {
             </h1>
             <p className="text-white-200 md:mt-10 my-5 text-center">Contactez-moi et voyons comment je peux vous aider à atteindre vos objectifs.</p>
             
-            <a href="mailto:paristom71@gmail.com">
-                <MagicButton
-                    title="Prenons contact !"
-                    icon={<FaLocationArrow />}
-                    position="right"
-                />
-            </a>
+            <ContactForm />
         </div>    
         
         <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
