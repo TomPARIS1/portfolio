@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "./label";
 import { Input } from "./input";
 import { cn } from "@/lib/utils";
 
 export function ContactForm() {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+
     async function handleSubmit(event: any) {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -14,6 +17,7 @@ export function ContactForm() {
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
+      try {
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -22,15 +26,34 @@ export function ContactForm() {
             },
             body: json
         });
+
         const result = await response.json();
+
         if (result.success) {
-            console.log(result);
+          setFormSubmitted(true);
+        } else {
+          setErrorMessage("Une erreur est survenue. Veuillez réessayer.");
         }
+      } catch (error: any) {
+        setErrorMessage("Une erreur est survenue lors de l'envoi du formulaire : " + error);
+      }
     }
 
     return (
-        <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-neutral-900">
+      <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-neutral-900">
 
+        {formSubmitted && (
+          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <span className="block sm:inline">Le formulaire a été envoyé avec succès.</span>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="bg-red-500 border border-red-400 text-white text-center p-2 mb-4 rounded">
+            {errorMessage}
+          </div>
+        )}
+          
         <form className="my-4" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <LabelInputContainer>
@@ -62,15 +85,15 @@ export function ContactForm() {
             </LabelInputContainer>
 
             <button
-            className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-            type="submit"
+              className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+              type="submit"
             >
-            Envoyer &rarr;
+              Envoyer &rarr;
             <BottomGradient />
             </button>
 
         </form>
-        </div>
+      </div>
     );
 }
 
