@@ -21,9 +21,7 @@ const Footer = () => {
                 />
             </a>
         </div>    
-        <div className="h-screen w-full dark:bg-neutral-950 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
-                {/* Radial gradient for the container to give a faded look */}
-            </div>
+        
         <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
             <p className="md:text-base text-sm md:font-normal font-light sm:mb-2">Copyright © 2024 Tom Paris</p>
 

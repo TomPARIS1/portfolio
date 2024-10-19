@@ -1,46 +1,80 @@
-import React from 'react'
-import { Spotlight } from './ui/spotlight'
-import { TextGenerateEffect } from './ui/text-generate-effect'
-import MagicButton from './ui/magic-button'
-import { GoCommandPalette } from 'react-icons/go'
+"use client"
+
+import React from "react";
+import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { FaDownload } from "react-icons/fa6";
+import MagicButton from "./ui/magic-button";
 
 const Hero = () => {
   return (
-        <div className="pb-20 pt-36">
-            <div>
-                <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white"/>
-                <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="white"/>
-                <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="gray"/>
-                
-                <Spotlight className="-top-40 -right-40 h-screen" fill="gray"/> 
-            </div>
-            <div className="h-screen w-full dark:bg-neutral-950 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
-                {/* Radial gradient for the container to give a faded look */}
-            </div>
-            <div className="flex justify-center relative my-20 z-10">
-                <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-                    <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-                        Portfolio personnel
-                    </h2>
-
-                    <TextGenerateEffect
-                        className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                        words="Transformer vos idées en une expérience captivante"
-                    />
-
-                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                        Bonjour, je suis Tom, un développeur originaire de France.
-                    </p>
-                    <a href="#about">
-                        <MagicButton 
-                            title="En savoir plus"
-                            icon={<GoCommandPalette />}
-                            position='right'
-                        />
-                    </a>
-                </div>
-            </div>
+    <section className="lg:py-16 h-screen w-full flex justify-center items-center">
+        <div className="h-screen w-full dark:bg-neutral-900 bg-white flex items-center justify-center absolute top-0 left-0 blur-xl">
+            
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-12">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
+            <h1 className="text-neutral-400 mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+            <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+                Bonjour, je suis
+            </span>
+            <br></br>
+            <TypeAnimation
+                sequence={[
+                "Tom",
+                1000,
+                "Développeur passionné",
+                1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+            />
+            </h1>
+            <p className="text-white text-base sm:text-lg mb-6 lg:text-xl">
+                Transformer vos idées en une expérience captivante !
+            </p>
+            <div className="flex gap-4">
+                <a href="#contact">
+                    <MagicButton
+                        title="Me contacter"
+                        icon=""
+                        position=""
+                    />
+                </a>
+                <a href="/CV_Tom_PARIS.pdf" download>
+                    <MagicButton
+                        title="Télécharger mon CV"
+                        icon={<FaDownload />}
+                        position="right"
+                    />
+                </a>
+            </div>
+        </motion.div>
+        <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="col-span-4 place-self-center mt-4 lg:mt-0"
+        >
+            <div className="rounded-full bg-neutral-950 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <Image
+                src="/logo-hero.png"
+                alt="Head Logo"
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                width={300}
+                height={300}
+            />
+            </div>
+        </motion.div>
+        </div>
+    </section>
   )
 }
 
