@@ -68,11 +68,11 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "Application en développement...",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.",
-      img: "/indev.png",
-      iconLists: ["/git.svg"],
-      link: "https://github.com/TomPARIS1",
+      title: "SAE - Positions outils",
+      des: "Site réalisé dans le cadre de mes études à la demande d'une étudiante de l'ISAT. Le site est connecté à des puces liées à des outils et récupère les données grâce à une API en PHP, ce qui permet de les localiser et gérer.",
+      img: "/saeclecle.png",
+      iconLists: ["/php-logo.svg","/js.svg","/HTML5.svg","/git.svg"],
+      link: "https://github.com/TomPARIS1/SAE-Position-Outils",
     },
     {
       id: 4,

@@ -38,7 +38,9 @@ const Hero = () => {
             />
             </h1>
             <p className="text-white text-base sm:text-lg mb-6 lg:text-xl">
-                Transformer vos idées en une expérience captivante !
+            Transformer vos idées en expériences captivantes !
+            <br/>
+            Développeur web freelance React / Next.js — Disponible pour missions à distance.
             </p>
             <div className="flex gap-4">
                 <a href="#contact">
