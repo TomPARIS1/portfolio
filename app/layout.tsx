@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Tom Paris - Portfolio",
+  title: "Tom Paris - Développeur Full-Stack",
   description: "Portfolio personnel & moderne développé en NextJS",
 };
 
