@@ -54,7 +54,7 @@ const Hero = () => {
                     />
                     </h1>
                     <p className="text-white text-base sm:text-lg mb-6 lg:text-xl text-center">
-                    Transformer vos idées en expériences captivantes à l'aide de technologies modernes !
+                        {`Transformer vos idées en expériences captivantes à l'aide de technologies modernes !`}
                     </p>
                     <div className="flex gap-4 justify-center items-center">
                         <a href="#contact">
