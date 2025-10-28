@@ -230,6 +230,24 @@ const cards = [
       );
     },
   },
+    {
+        description: "Itineris",
+        title: "Planificateur de voyage",
+        src: "/itineris.png",
+        ctaText: "Demo",
+        ctaLink: "https://goitineris.vercel.app/",
+        ctaTextGit: "Github",
+        ctaLinkGit: "https://github.com/TomPARIS1/itineris",
+        content: () => {
+            return (
+                <p>
+                    Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
+                    Elle permet de planifier et gérer ses voyages de manière intuitive : l’utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
+                    L’app intègre également Clerk pour l’authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l’organisation de leurs aventures.
+                </p>
+            );
+        },
+    },
   {
     description: "CVCheckr",
     title: "Analyseur de CV",
@@ -248,20 +266,20 @@ const cards = [
       );
     },
   },
-  {
-    description: "Application en développement",
-    title: "En cours...",
-    src: "/indev.png",
-    ctaText: "Demo",
-    ctaLink: "https://github.com/TomPARIS1",
-      ctaTextGit: "Github",
-      ctaLinkGit: "https://github.com/TomPARIS1",
-      content: () => {
-      return (
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.
-        </p>
-      );
-    },
-  },
+    /*{
+        description: "Application en développement",
+        title: "En cours...",
+        src: "/indev.png",
+        ctaText: "Demo",
+        ctaLink: "https://github.com/TomPARIS1",
+        ctaTextGit: "Github",
+        ctaLinkGit: "https://github.com/TomPARIS1",
+        content: () => {
+            return (
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.
+                </p>
+            );
+        },
+    },*/
 ];
