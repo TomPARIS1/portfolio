@@ -267,20 +267,38 @@ const cards = [
       );
     },
   },
-    /*{
-        description: "Application en développement",
-        title: "En cours...",
-        src: "/indev.webp",
-        ctaText: "Demo",
-        ctaLink: "https://github.com/TomPARIS1",
-        ctaTextGit: "Github",
-        ctaLinkGit: "https://github.com/TomPARIS1",
-        content: () => {
-            return (
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.
-                </p>
-            );
-        },
-    },*/
+  {
+    description: "Amélioration des Core Web Vitals",
+    title: "Optimisation de performance — Portfolio",
+    src: "/cwv.webp",
+    ctaText: "Etude",
+    ctaLink: "https://pacific-fennel-5c3.notion.site/tude-de-cas-Optimisation-des-performances-de-mon-portfolio-2ab7747500dc808a9656cd2426e6ec63",
+    ctaTextGit: "Github",
+    ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
+    content: () => {
+      return (
+        <p>
+            Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. 
+            Après un audit complet Lighthouse et Core Web Vitals, j’ai mis en place une stratégie ciblée : optimisation des images (WebP + Next/Image), suppression de composants gourmands 
+            (dont une animation Three.js), nettoyage et découpage du bundle, lazy loading des assets et optimisation du chargement des polices et scripts.
+        </p>
+      );
+    },
+  },
+  {
+      description: "Application en développement",
+      title: "En cours...",
+      src: "/indev.webp",
+      ctaText: "Demo",
+      ctaLink: "https://github.com/TomPARIS1",
+      ctaTextGit: "Github",
+      ctaLinkGit: "https://github.com/TomPARIS1",
+      content: () => {
+          return (
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.
+              </p>
+          );
+      },
+  },
 ];
