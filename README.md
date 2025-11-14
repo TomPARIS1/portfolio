@@ -27,7 +27,7 @@ Ce projet a pour but de créer une vitrine professionnelle simple, responsive et
 
 ## 📸 Captures d’écran
 
-![Page d'accueil](./public/portfolio.png)  
+![Page d'accueil](./public/portfolio.webp)  
 *(Capture d'écran de la page d'accueil du portfolio)*
 
 ---

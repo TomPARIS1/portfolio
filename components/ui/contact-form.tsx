@@ -81,8 +81,8 @@ export function ContactForm() {
                 <Input id="subject" placeholder="Sujet..." type="text" name="subject" required/>
             </LabelInputContainer>
             <LabelInputContainer className="mb-8">
-                <Label htmlFor="subject">Message</Label>
-                <textarea id="subject" placeholder="Message..." name="message" className="flex h-10 w-full border-none bg-gray-50 dark:bg-zinc-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent 
+                <Label htmlFor="message">Message</Label>
+                <textarea id="message" placeholder="Message..." name="message" className="flex h-10 w-full border-none bg-gray-50 dark:bg-zinc-800 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent 
                   file:text-sm file:font-medium placeholder:text-neutral-400 dark:placeholder-text-neutral-600 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] group-hover/input:shadow-none transition duration-400 min-h-[80px]"  required
                 />
             </LabelInputContainer>

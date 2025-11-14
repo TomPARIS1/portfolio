@@ -2,14 +2,16 @@
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import { GridGlobe } from "./grid-globe";
-import Lottie from "react-lottie";
 import { useState } from "react";
-import animationData from "@/data/confetti.json"
 import MagicButton from "./magic-button";
 import { IoCopyOutline } from "react-icons/io5";
 import { SiJavascript, SiNextdotjs, SiPhp, SiTailwindcss, SiTypescript } from "react-icons/si";
-import { Meteors } from "./meteors";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+const Meteors = dynamic(() => import("@/components/ui/meteors").then(m => m.Meteors), {
+  ssr: false,
+});
 
 export const BentoGrid = ({
   className,
@@ -75,7 +77,7 @@ export const BentoGridItem = ({
       <div className={`${id === 4 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover object-center")}
@@ -87,7 +89,7 @@ export const BentoGridItem = ({
             } `}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
               className="object-cover object-center w-full h-full"
@@ -109,15 +111,13 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
-          <div className="font-sans font-extralight md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10 whitespace-pre-line">
             {description}
           </div>
 
-          {id === 1 && <GridGlobe />}
-
           {id === 3 && (
             <div className="w-full items-center">
-              <Meteors number={20} className=""/>
+              <Meteors number={20}/>
             </div>
           )}
 
@@ -138,17 +138,6 @@ export const BentoGridItem = ({
 
           {id === 4 && (
             <div className="relative">
-              <div className={`absolute -bottom-5 right-0`}>
-                <Lottie options={{
-                  loop: copied,
-                  autoplay: copied,
-                  animationData,
-                  rendererSettings: {
-                    preserveAspectRatio: 'xMidYMid slice',
-                  }
-                }}/>
-              </div>
-
               <MagicButton
                 title={copied ? 'Email copié' : 'Copier mon email'}
                 icon={<IoCopyOutline />}

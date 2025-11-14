@@ -118,16 +118,6 @@ const config = {
   					height: '0'
   				}
   			},
-  			spotlight: {
-  				'0%': {
-  					opacity: '0',
-  					transform: 'translate(-72%, -62%) scale(0.5)'
-  				},
-  				'100%': {
-  					opacity: '1',
-  					transform: 'translate(-50%,-40%) scale(1)'
-  				}
-  			},
   			shimmer: {
   				from: {
   					backgroundPosition: '0 0'
@@ -173,21 +163,25 @@ const config = {
   				to: {
   					transform: 'translate(calc(-50% - 0.5rem))'
   				}
-  			}
+  			},
+			heroSoftIn: {
+			'0%': { opacity: '0.02', transform: 'translateY(10px)' },
+			'100%': { opacity: '1', transform: 'translateY(0)' },
+			}
   		},
   		animation: {
   			'meteor-effect': 'meteor 5s linear infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			spotlight: 'spotlight 2s ease .75s 1 forwards',
   			shimmer: 'shimmer 2s linear infinite',
   			first: 'moveVertical 30s ease infinite',
   			second: 'moveInCircle 20s reverse infinite',
   			third: 'moveInCircle 40s linear infinite',
   			fourth: 'moveHorizontal 40s ease infinite',
   			fifth: 'moveInCircle 20s ease infinite',
-  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
-  		}
+  			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+			heroSoftIn: 'heroSoftIn 2s ease-out forwards'
+		}
   	}
   },
   plugins: [

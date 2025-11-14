@@ -3,6 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -71,9 +72,9 @@ export default function ExpandableCardDemo() {
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
-                  width={200}
-                  height={200}
+                <Image
+                  width={600}
+                  height={350}
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -150,9 +151,9 @@ export default function ExpandableCardDemo() {
           >
             <div className="flex gap-4 flex-col w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <img
-                  width={100}
-                  height={100}
+                <Image
+                  width={600}
+                  height={350}
                   src={card.src}
                   alt={card.title}
                   className="h-60 w-full rounded-lg object-cover object-top"
@@ -217,7 +218,7 @@ const cards = [
   {
     description: "Portfolio",
     title: "Site actuel",
-    src: "/portfolio.png",
+    src: "/portfolio.webp",
     ctaText: "Demo",
     ctaLink: "https://tomparis.vercel.app/",
       ctaTextGit: "Github",
@@ -233,7 +234,7 @@ const cards = [
     {
         description: "Itineris",
         title: "Planificateur de voyage",
-        src: "/itineris.png",
+        src: "/itineris.webp",
         ctaText: "Demo",
         ctaLink: "https://goitineris.vercel.app/",
         ctaTextGit: "Github",
@@ -251,7 +252,7 @@ const cards = [
   {
     description: "CVCheckr",
     title: "Analyseur de CV",
-    src: "/cvcheckr.png",
+    src: "/cvcheckr.webp",
     ctaText: "Demo",
     ctaLink: "https://cvcheckr.vercel.app/",
     ctaTextGit: "Github",
@@ -269,7 +270,7 @@ const cards = [
     /*{
         description: "Application en développement",
         title: "En cours...",
-        src: "/indev.png",
+        src: "/indev.webp",
         ctaText: "Demo",
         ctaLink: "https://github.com/TomPARIS1",
         ctaTextGit: "Github",

@@ -1,6 +1,7 @@
 import { workExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/moving-border'
+import Image from 'next/image';
 
 const Services = () => {
   return (
@@ -13,7 +14,6 @@ const Services = () => {
         {workExperience.map((card) => (
           <Button
             key={card.id}
-            //   random duration will be fun , I think , may be not
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
             style={{
@@ -25,9 +25,11 @@ const Services = () => {
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-white/[0.1]"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
+              <Image
                 src={card.thumbnail}
                 alt={card.thumbnail}
+                width={128}
+                height={128}
                 className="lg:w-32 md:w-20 w-16"
               />
               <div className="lg:ms-5">

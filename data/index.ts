@@ -8,8 +8,8 @@ export const navItems = [
   export const gridItems = [
     {
       id: 1,
-      title: "Un nouveau monde",
-      description: "Récemment diplômé d'un BUT Informatique, je propose aujourd'hui mes services de développement. C'est pour moi une véritable occasion d'exprimer mes compétences, de donner vie à mes projets mais aussi de participer à de nouvelles expériences.",
+      title: "Créer, innover et donner vie aux idées",
+      description: "Développeur web passionné, j’aide les entreprises, les créateurs et les indépendants à transformer leurs idées en véritables expériences numériques. Pas seulement des sites : des plateformes modernes, fluides, rapides et uniques.\n\nMon objectif : concevoir des interfaces élégantes et un parcours utilisateur fluide, en combinant esthétisme, performance et technologie.\n\nChaque projet est pour moi l’occasion d’innover, d’apprendre et d’apporter une vraie valeur à celles et ceux qui me font confiance. J’aime comprendre la vision, la sublimer et la transformer en un produit dont on peut être fier.",
       className: "lg:col-span-2 md:col-span-6 md:row-span-2 lg:min-h-[60vh]",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -29,7 +29,7 @@ export const navItems = [
     {
       id: 3,
       title: "Passionné de technologie, mais pas que !",
-      description: "En dehors du développement, j'adore la musique, notamment tout ce qui est de la culture hip-hop et rap, mais aussi la musculation, que je pratique en salle.",
+      description: "Même si le développement occupe une grande place dans ma vie, je suis aussi passionné par la musique — notamment la culture hip-hop — et par le sport, avec un gros intérêt pour la musculation.\n\nJ’aime apprendre, progresser et me dépasser, que ce soit derrière un clavier, dans une salle de sport ou à travers de nouvelles découvertes. Ce mindset m’accompagne dans ma façon de créer : curiosité, exigence et envie de faire mieux à chaque projet.",
       className: "lg:col-span-3 md:row-span-1 md:col-span-6",
       imgClassName: "",
       titleClassName: "justify-start",
@@ -54,7 +54,7 @@ export const navItems = [
       id: 1,
       title: "Portfolio personnel",
       des: "Projet personnel permettant d'avoir un bref aperçu de mon travail. Le site regroupe mes projets, présente mes compétences et mets en avant quelques projets.",
-      img: "/portfolio.png",
+      img: "/portfolio.webp",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/git.svg"],
       link: "https://github.com/TomPARIS1/TomPARIS1.github.io",
     },
@@ -62,7 +62,7 @@ export const navItems = [
       id: 2,
       title: "CVCheckr",
       des: "Projet personnel utilisant l'IA. Le site récupère votre CV, l'analyse à l'aide de l'IA puis le note en fonction de plusieurs critères afin de vous aider à l'améliorer.",
-      img: "/cvcheckr.png",
+      img: "/cvcheckr.webp",
       iconLists: ["/php-logo.svg","/js.svg","/HTML5.svg","/git.svg"],
       link: "https://cvcheckr.vercel.app",
     },
@@ -70,7 +70,7 @@ export const navItems = [
       id: 3,
       title: "Application en développement...",
       des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.",
-      img: "/indev.png",
+      img: "/indev.webp",
       iconLists: ["/git.svg"],
       link: "https://github.com/TomPARIS1",
     },
@@ -82,28 +82,28 @@ export const navItems = [
       title: "Développement Back-End",
       desc: "Conception et mise en œuvre de la logique serveur, des bases de données et des API pour assurer la performance et la sécurité de vos applications.",
       className: "md:col-span-2",
-      thumbnail: "/terminal.png",
+      thumbnail: "/terminal.webp",
     },
     {
       id: 2,
       title: "Développement Front-End",
       desc: "Création d'interfaces utilisateur intuitives et réactives, utilisant les dernières technologies pour offrir une expérience optimale sur tous les appareils.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/code.png",
+      thumbnail: "/code.webp",
     },
     {
       id: 3,
       title: "Développement Multi-Plateformes",
       desc: "Développement d'applications qui fonctionnent parfaitement sur différentes plateformes (Web, iOS, Android), réduisant ainsi le temps et les coûts de développement.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/application-mobile.png",
+      thumbnail: "/application-mobile.webp",
     },
     {
       id: 4,
       title: "Support et Maintenance",
       desc: "Assurez le bon fonctionnement de vos applications grâce à un service de support et de maintenance proactif, incluant mises à jour, corrections de bugs et optimisation des performances.",
       className: "md:col-span-2",
-      thumbnail: "/conseil.png",
+      thumbnail: "/conseil.webp",
     },
   ];
   
@@ -121,6 +121,6 @@ export const navItems = [
     {
       id: 3,
       img: "/link.svg",
-      link: "https://www.linkedin.com/in/tom-paris-03737b253/",
+      link: "www.linkedin.com/in/tom-paris-a20435396",
     },
   ];
