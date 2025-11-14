@@ -268,19 +268,19 @@ const cards = [
     },
   },
   {
-    description: "Amélioration des Core Web Vitals",
-    title: "Optimisation de performance — Portfolio",
+    description: "Portfolio",
+    title: "Optimisation de performances",
     src: "/cwv.webp",
-    ctaText: "Etude",
+    ctaText: "Lire l'étude",
     ctaLink: "https://pacific-fennel-5c3.notion.site/tude-de-cas-Optimisation-des-performances-de-mon-portfolio-2ab7747500dc808a9656cd2426e6ec63",
     ctaTextGit: "Github",
     ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
     content: () => {
       return (
         <p>
-            Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. 
-            Après un audit complet Lighthouse et Core Web Vitals, j’ai mis en place une stratégie ciblée : optimisation des images (WebP + Next/Image), suppression de composants gourmands 
-            (dont une animation Three.js), nettoyage et découpage du bundle, lazy loading des assets et optimisation du chargement des polices et scripts.
+           Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. Après un audit complet Lighthouse et Core Web Vitals, j’ai mis en place une stratégie ciblée : conversion des images en WebP avec optimisation Next/Image, suppression de composants très gourmands (dont une animation Three.js), lazy loading des assets, découpage du bundle et optimisation du chargement des polices et scripts.
+          <br />
+          Cette intervention a permis d’augmenter considérablement la vitesse du site : le score Lighthouse Performance est passé de 27 à 99, le temps de chargement a été divisé par 3, et la navigation est désormais fluide même en connexion 4G faible — tout en conservant exactement la même identité visuelle.
         </p>
       );
     },
