@@ -123,13 +123,13 @@ export default function ExpandableCardDemo() {
                     </div>
 
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="pt-4 relative px-6">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base max-h-40 md:max-h-60 pb-4 flex flex-col items-start gap-4 overflow-y-auto dark:text-neutral-400 [scrollbar-width:auto] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -225,9 +225,41 @@ const cards = [
       ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
       content: () => {
       return (
-        <p>Ce portfolio a été conçu avec Next.js, TypeScript et Tailwind CSS dans le but de présenter mes compétences, mes projets et mon profil de manière claire, moderne et responsive.
+        <div className="space-y-4">
+          <p>
+            Ce portfolio a été conçu avec Next.js, TypeScript et Tailwind CSS dans le but de présenter mes compétences, mes projets et mon profil de manière claire, moderne et responsive.
+          </p>
+          <p>
             Il intègre des composants issus de Aceternity UI, des animations douces, un formulaire de contact fonctionnel, ainsi qu’un système de monitoring des erreurs via Sentry.
-            L’objectif : offrir une expérience fluide et professionnelle à tout visiteur intéressé par mes services ou mon profil développeur.</p>
+          </p>
+          <p>
+            L’objectif : offrir une expérience fluide et professionnelle à tout visiteur intéressé par mes services ou mon profil développeur.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    description: "Elara",
+    title: "Boutique E-commerce Headless",
+    src: "/elara.webp",
+    ctaText: "Demo",
+    ctaLink: "https://elara-shop.vercel.app/",
+    ctaTextGit: "Github",
+    ctaLinkGit: "https://github.com/TomPARIS1/",
+    content: () => {
+      return (
+        <div className="space-y-4">
+          <p>
+            Elara est une plateforme de vente en ligne construite pour la performance avec Next.js, TypeScript et Tailwind CSS, et connectée à un Headless CMS (Sanity) pour une gestion du catalogue en toute simplicité.
+          </p>
+          <p>
+            Elle a été pensée pour résoudre le problème majeur du commerce électronique : la perte de conversion due à la lenteur. Grâce à son architecture, la boutique garantit une fluidité exceptionnelle, permettant aux utilisateurs d'explorer les "Essential Goods" de manière intuitive et d'arriver au paiement sans accroc.
+          </p>
+          <p>
+            Les performances techniques sont au service du business : le site affiche un score de 97/100 en Performance et 100/100 en SEO sur Lighthouse. L'interface est moderne, épurée et totalement responsive, offrant une expérience haut de gamme pensée pour maximiser la confiance et les ventes.
+          </p>
+        </div>
       );
     },
   },
@@ -241,11 +273,17 @@ const cards = [
         ctaLinkGit: "https://github.com/TomPARIS1/itineris",
         content: () => {
             return (
-                <p>
-                    Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
-                    Elle permet de planifier et gérer ses voyages de manière intuitive : l’utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
-                    L’app intègre également Clerk pour l’authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l’organisation de leurs aventures.
-                </p>
+              <div className="space-y-4">
+              <p>
+                Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
+              </p>
+              <p>
+                Elle permet de planifier et gérer ses voyages de manière intuitive : l’utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
+              </p>
+              <p>
+                L’app intègre également Clerk pour l’authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l’organisation de leurs aventures.
+              </p>
+            </div>
             );
         },
     },
@@ -259,16 +297,23 @@ const cards = [
     ctaLinkGit: "https://github.com/TomPARIS1/cvcheckr",
     content: () => {
       return (
-        <p>
+        <div className="space-y-4">
+          <p>
             CVCheckr est une application web développée avec React (Vite), Tailwind CSS et la plateforme Puter, permettant d’analyser automatiquement un CV grâce à une intelligence artificielle.
+          </p>
+          <p>
             L’utilisateur dépose son CV, ajoute des détails comme le nom de l’entreprise ciblée ou l’offre d’emploi, puis l’IA fournit une note basée sur les critères ATS (Applicant Tracking System) ainsi que des recommandations personnalisées pour améliorer le document.
+          </p>
+          <p>
             L’app est responsive, rapide, et totalement serverless, avec toute la logique d’analyse, d’authentification et de traitement gérée par Puter.
-        </p>
+          </p>
+        </div>
+
       );
     },
   },
   {
-    description: "Portfolio",
+    description: "Portfolio 2",
     title: "Optimisation de performances",
     src: "/cwv.webp",
     ctaText: "Lire l'étude",
@@ -277,11 +322,14 @@ const cards = [
     ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
     content: () => {
       return (
-        <p>
-           Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. Après un audit complet Lighthouse et Core Web Vitals, j’ai mis en place une stratégie ciblée : conversion des images en WebP avec optimisation Next/Image, suppression de composants très gourmands (dont une animation Three.js), lazy loading des assets, découpage du bundle et optimisation du chargement des polices et scripts.
-          <br />
-          Cette intervention a permis d’augmenter considérablement la vitesse du site : le score Lighthouse Performance est passé de 27 à 99, le temps de chargement a été divisé par 3, et la navigation est désormais fluide même en connexion 4G faible — tout en conservant exactement la même identité visuelle.
-        </p>
+        <div className="space-y-4">
+          <p>
+            Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. Après un audit complet Lighthouse et Core Web Vitals, j’ai mis en place une stratégie ciblée : conversion des images en WebP avec optimisation Next/Image, suppression de composants très gourmands (dont une animation Three.js), lazy loading des assets, découpage du bundle et optimisation du chargement des polices et scripts.
+          </p>
+          <p>
+            Cette intervention a permis d’augmenter considérablement la vitesse du site : le score Lighthouse Performance est passé de 27 à 99, le temps de chargement a été divisé par 3, et la navigation est désormais fluide même en connexion 4G faible — tout en conservant exactement la même identité visuelle.
+          </p>
+        </div>
       );
     },
   },
