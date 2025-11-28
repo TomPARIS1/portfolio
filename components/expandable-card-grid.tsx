@@ -230,10 +230,10 @@ const cards = [
             Ce portfolio a été conçu avec Next.js, TypeScript et Tailwind CSS dans le but de présenter mes compétences, mes projets et mon profil de manière claire, moderne et responsive.
           </p>
           <p>
-            Il intègre des composants issus de Aceternity UI, des animations douces, un formulaire de contact fonctionnel, ainsi qu’un système de monitoring des erreurs via Sentry.
+            Il intègre des composants issus de Aceternity UI, des animations douces, un formulaire de contact fonctionnel, ainsi qu&apos;un système de monitoring des erreurs via Sentry.
           </p>
           <p>
-            L’objectif : offrir une expérience fluide et professionnelle à tout visiteur intéressé par mes services ou mon profil développeur.
+            L&apos;objectif : offrir une expérience fluide et professionnelle à tout visiteur intéressé par mes services ou mon profil développeur.
           </p>
         </div>
       );
@@ -254,10 +254,10 @@ const cards = [
             Elara est une plateforme de vente en ligne construite pour la performance avec Next.js, TypeScript et Tailwind CSS, et connectée à un Headless CMS (Sanity) pour une gestion du catalogue en toute simplicité.
           </p>
           <p>
-            Elle a été pensée pour résoudre le problème majeur du commerce électronique : la perte de conversion due à la lenteur. Grâce à son architecture, la boutique garantit une fluidité exceptionnelle, permettant aux utilisateurs d'explorer les "Essential Goods" de manière intuitive et d'arriver au paiement sans accroc.
+            Elle a été pensée pour résoudre le problème majeur du commerce électronique : la perte de conversion due à la lenteur. Grâce à son architecture, la boutique garantit une fluidité exceptionnelle, permettant aux utilisateurs d&apos;explorer les &quot;Essential Goods&quot; de manière intuitive et d&apos;arriver au paiement sans accroc.
           </p>
           <p>
-            Les performances techniques sont au service du business : le site affiche un score de 97/100 en Performance et 100/100 en SEO sur Lighthouse. L'interface est moderne, épurée et totalement responsive, offrant une expérience haut de gamme pensée pour maximiser la confiance et les ventes.
+            Les performances techniques sont au service du business : le site affiche un score de 97/100 en Performance et 100/100 en SEO sur Lighthouse. L&apos;interface est moderne, épurée et totalement responsive, offrant une expérience haut de gamme pensée pour maximiser la confiance et les ventes.
           </p>
         </div>
       );
@@ -274,16 +274,16 @@ const cards = [
         content: () => {
             return (
               <div className="space-y-4">
-              <p>
-                Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
-              </p>
-              <p>
-                Elle permet de planifier et gérer ses voyages de manière intuitive : l’utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
-              </p>
-              <p>
-                L’app intègre également Clerk pour l’authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l’organisation de leurs aventures.
-              </p>
-            </div>
+                <p>
+                  Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
+                </p>
+                <p>
+                  Elle permet de planifier et gérer ses voyages de manière intuitive : l&apos;utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
+                </p>
+                <p>
+                  L&apos;app intègre également Clerk pour l&apos;authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l&apos;organisation de leurs aventures.
+                </p>
+              </div>
             );
         },
     },
@@ -299,13 +299,13 @@ const cards = [
       return (
         <div className="space-y-4">
           <p>
-            CVCheckr est une application web développée avec React (Vite), Tailwind CSS et la plateforme Puter, permettant d’analyser automatiquement un CV grâce à une intelligence artificielle.
+            CVCheckr est une application web développée avec React (Vite), Tailwind CSS et la plateforme Puter, permettant d&apos;analyser automatiquement un CV grâce à une intelligence artificielle.
           </p>
           <p>
-            L’utilisateur dépose son CV, ajoute des détails comme le nom de l’entreprise ciblée ou l’offre d’emploi, puis l’IA fournit une note basée sur les critères ATS (Applicant Tracking System) ainsi que des recommandations personnalisées pour améliorer le document.
+            L&apos;utilisateur dépose son CV, ajoute des détails comme le nom de l&apos;entreprise ciblée ou l&apos;offre d&apos;emploi, puis l&apos;IA fournit une note basée sur les critères ATS (Applicant Tracking System) ainsi que des recommandations personnalisées pour améliorer le document.
           </p>
           <p>
-            L’app est responsive, rapide, et totalement serverless, avec toute la logique d’analyse, d’authentification et de traitement gérée par Puter.
+            L&apos;app est responsive, rapide, et totalement serverless, avec toute la logique d&apos;analyse, d&apos;authentification et de traitement gérée par Puter.
           </p>
         </div>
 
@@ -324,10 +324,10 @@ const cards = [
       return (
         <div className="space-y-4">
           <p>
-            Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. Après un audit complet Lighthouse et Core Web Vitals, j’ai mis en place une stratégie ciblée : conversion des images en WebP avec optimisation Next/Image, suppression de composants très gourmands (dont une animation Three.js), lazy loading des assets, découpage du bundle et optimisation du chargement des polices et scripts.
+            Ce projet a consisté à améliorer en profondeur les performances de mon portfolio personnel sans modifier son design. Après un audit complet Lighthouse et Core Web Vitals, j&apos;ai mis en place une stratégie ciblée : conversion des images en WebP avec optimisation Next/Image, suppression de composants très gourmands (dont une animation Three.js), lazy loading des assets, découpage du bundle et optimisation du chargement des polices et scripts.
           </p>
           <p>
-            Cette intervention a permis d’augmenter considérablement la vitesse du site : le score Lighthouse Performance est passé de 27 à 99, le temps de chargement a été divisé par 3, et la navigation est désormais fluide même en connexion 4G faible — tout en conservant exactement la même identité visuelle.
+            Cette intervention a permis d&apos;augmenter considérablement la vitesse du site : le score Lighthouse Performance est passé de 27 à 99, le temps de chargement a été divisé par 3, et la navigation est désormais fluide même en connexion 4G faible — tout en conservant exactement la même identité visuelle.
           </p>
         </div>
       );
