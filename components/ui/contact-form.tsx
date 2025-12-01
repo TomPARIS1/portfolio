@@ -43,7 +43,7 @@ export function ContactForm() {
                 setErrorMessage("Une erreur est survenue. Veuillez réessayer.");
             }
         } catch (error: any) {
-            setErrorMessage("Une erreur est survenue lors de l'envoi du formulaire.");
+            setErrorMessage("Une erreur est survenue lors de l'envoi du formulaire : " + error);
         }
     }
 
