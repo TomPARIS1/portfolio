@@ -6,6 +6,8 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/data";
 import Footer from "@/components/footer";
 
+export const dynamic = "force-static";
+
 export default function Home() {
   return (
     <main className="relative bg-neutral-950 

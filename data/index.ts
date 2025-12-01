@@ -48,33 +48,7 @@ export const navItems = [
       spareImg: "",
     },
   ];
-  
-  export const projects = [
-    {
-      id: 1,
-      title: "Portfolio personnel",
-      des: "Projet personnel permettant d'avoir un bref aperçu de mon travail. Le site regroupe mes projets, présente mes compétences et mets en avant quelques projets.",
-      img: "/portfolio.webp",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/git.svg"],
-      link: "https://github.com/TomPARIS1/TomPARIS1.github.io",
-    },
-    {
-      id: 2,
-      title: "CVCheckr",
-      des: "Projet personnel utilisant l'IA. Le site récupère votre CV, l'analyse à l'aide de l'IA puis le note en fonction de plusieurs critères afin de vous aider à l'améliorer.",
-      img: "/cvcheckr.webp",
-      iconLists: ["/php-logo.svg","/js.svg","/HTML5.svg","/git.svg"],
-      link: "https://cvcheckr.vercel.app",
-    },
-    {
-      id: 3,
-      title: "Application en développement...",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.",
-      img: "/indev.webp",
-      iconLists: ["/git.svg"],
-      link: "https://github.com/TomPARIS1",
-    },
-  ];
+
   
   export const workExperience = [
     {
@@ -88,14 +62,14 @@ export const navItems = [
       id: 2,
       title: "Développement Front-End",
       desc: "Création d'interfaces utilisateur intuitives et réactives, utilisant les dernières technologies pour offrir une expérience optimale sur tous les appareils.",
-      className: "md:col-span-2", // change to md:col-span-2
+      className: "md:col-span-2",
       thumbnail: "/code.webp",
     },
     {
       id: 3,
       title: "Développement Multi-Plateformes",
       desc: "Développement d'applications qui fonctionnent parfaitement sur différentes plateformes (Web, iOS, Android), réduisant ainsi le temps et les coûts de développement.",
-      className: "md:col-span-2", // change to md:col-span-2
+      className: "md:col-span-2",
       thumbnail: "/application-mobile.webp",
     },
     {
@@ -121,6 +95,7 @@ export const navItems = [
     {
       id: 3,
       img: "/link.svg",
-      link: "www.linkedin.com/in/tom-paris-a20435396",
+      link: "https://www.linkedin.com/in/tom-paris-dev/",
     },
   ];
+  

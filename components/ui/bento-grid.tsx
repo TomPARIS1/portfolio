@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import { useState } from "react";
+import { useState, memo, useCallback, useMemo } from "react";
 import MagicButton from "./magic-button";
 import { IoCopyOutline } from "react-icons/io5";
 import { SiJavascript, SiNextdotjs, SiPhp, SiTailwindcss, SiTypescript } from "react-icons/si";
@@ -11,9 +11,18 @@ import Image from "next/image";
 
 const Meteors = dynamic(() => import("@/components/ui/meteors").then(m => m.Meteors), {
   ssr: false,
+  loading: () => null,
 });
 
-export const BentoGrid = ({
+const TECH_LIST = [
+  { title: "NextJS", icon: <SiNextdotjs /> },
+  { title: "TypeScript", icon: <SiTypescript /> },
+  { title: "TailwindCSS", icon: <SiTailwindcss /> },
+  { title: "PHP", icon: <SiPhp /> },
+  { title: "JavaScript", icon: <SiJavascript /> }
+] as const;
+
+export const BentoGrid = memo(({
   className,
   children,
 }: {
@@ -30,9 +39,28 @@ export const BentoGrid = ({
       {children}
     </div>
   );
-};
+});
 
-export const BentoGridItem = ({
+BentoGrid.displayName = "BentoGrid";
+
+const TechList = memo(() => (
+  <div className="md:inline-flex items-center gap-3">
+    {TECH_LIST.map((item, i) => (
+      <span
+        key={i}
+        className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+        lg:opacity-100 rounded-lg text-center bg-[rgb(13,13,13)] border border-white/[0.1] flex items-center justify-between mb-2"
+      >
+        <div className="pr-2">{item.icon}</div>
+        <p>{item.title}</p>
+      </span>
+    ))}
+  </div>
+));
+
+TechList.displayName = "TechList";
+
+export const BentoGridItem = memo(({
   className,
   id,
   title,
@@ -51,16 +79,19 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
+  const handleCopy = useCallback(() => {
     navigator.clipboard.writeText('paristom71@gmail.com');
-
     setCopied(true);
-  }
+    
+    setTimeout(() => setCopied(false), 2000);
+  }, []);
 
-  const techList = [{title: "NextJS", icon: <SiNextdotjs/>}, {title: "TypeScript", icon: <SiTypescript/>}, {title: "TailwindCSS", icon: <SiTailwindcss/>}, {title: "PHP", icon: <SiPhp/>},
-    {title: "JavaScript", icon: <SiJavascript/>}];
+  const backgroundStyle = useMemo(() => ({
+    background: "rgb(23,23,23)",
+    backgroundColor: "linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(64,64,64,1) 100%)",
+  }), []);
 
   return (
     <div
@@ -68,37 +99,38 @@ export const BentoGridItem = ({
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 bg-neutral-900",
         className
       )}
-      style={{
-        background: "rgb(23,23,23)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(64,64,64,1) 100%)",
-      }}
+      style={backgroundStyle}
     >
       <div className={`${id === 4 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <Image
               src={img}
-              alt={img}
+              alt={title?.toString() || "Grid item"}
               className={cn(imgClassName, "object-cover object-center")}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="lazy"
+              quality={75}
             />
           )}
         </div>
-        <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
-        >
+        
+        <div className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"}`}>
           {spareImg && (
             <Image
               src={spareImg}
-              alt={spareImg}
+              alt="Decoration"
               className="object-cover object-center w-full h-full"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              quality={75}
             />
           )}
         </div>
-        {id === 4 && (
-          <BackgroundGradientAnimation />
-        )}
+
+        {id === 4 && <BackgroundGradientAnimation />}
 
         <div
           className={cn(
@@ -106,9 +138,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 mb-4`}
-          >
+          <div className="font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 mb-4">
             {title}
           </div>
           <div className="font-sans font-extralight md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10 whitespace-pre-line">
@@ -117,24 +147,11 @@ export const BentoGridItem = ({
 
           {id === 3 && (
             <div className="w-full items-center">
-              <Meteors number={20}/>
+              <Meteors number={20} />
             </div>
           )}
 
-          {id === 2 && (
-              <div className="md:inline-flex items-center gap-3">
-                {techList.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[rgb(13,13,13)] border border-white/[0.1] flex items-center justify-between mb-2"
-                  >
-                    <div className="pr-2">{item.icon}</div>
-                    <p>{item.title}</p>
-                  </span>
-                ))}
-              </div>
-          )}
+          {id === 2 && <TechList />}
 
           {id === 4 && (
             <div className="relative">
@@ -151,4 +168,6 @@ export const BentoGridItem = ({
       </div>
     </div>
   );
-};
+});
+
+BentoGridItem.displayName = "BentoGridItem";
