@@ -90,7 +90,7 @@ export const navItems = [
     {
       id: 2,
       img: "/twit.svg",
-      link: "",
+      link: "https://twitter.com/toomsahh",
     },
     {
       id: 3,

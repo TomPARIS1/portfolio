@@ -23,18 +23,6 @@ export const metadata: Metadata = {
   },
   
   description: "Développeur Full-Stack Freelance. Spécialisé Next.js, React, TypeScript et Tailwind CSS. Expertise Back-end PHP/MySQL pour applications web modernes.",
-  
-  keywords: [
-    'développeur full-stack', 
-    'développeur nextjs', 
-    'développeur react', 
-    'typescript', 
-    'tailwindcss', 
-    'php mysql', 
-    'tom paris portfolio',
-    'freelance développement web', 
-    'applications web modernes',
-  ],
 
   authors: [{ name: 'Tom Paris', url: 'https://tomparis.dev' }],
   creator: 'Tom Paris',
@@ -94,12 +82,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: Readonly<{ 
   children: React.ReactNode;
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <head>
+        
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -107,36 +98,85 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@graph": [
                 {
+                  "@type": "WebSite",
+                  "@id": "https://tomparis.dev/#website",
+                  "url": "https://tomparis.dev",
+                  "name": "Tom Paris Portfolio",
+                  "description": "Portfolio de Tom Paris, Développeur Full-Stack Freelance",
+                  "inLanguage": "fr-FR",
+                  "author": {
+                    "@id": "https://tomparis.dev/#person"
+                  }
+                },
+                {
                   "@type": "Person",
                   "@id": "https://tomparis.dev/#person",
                   "name": "Tom Paris",
                   "url": "https://tomparis.dev",
-                  "jobTitle": "Développeur Full-Stack Freelance",
                   "image": "https://tomparis.dev/profile.webp",
+                  "jobTitle": "Développeur Full-Stack Freelance",
+                  "description": "Développeur Full-Stack spécialisé en Next.js, React, TypeScript et Back-end PHP/MySQL",
+                  "knowsAbout": [
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "JavaScript",
+                    "Tailwind CSS",
+                    "PHP",
+                    "MySQL",
+                    "Développement Full-Stack",
+                    "Développement Web",
+                    "Développement Front-end",
+                    "Développement Back-end"
+                  ],
                   "sameAs": [
-                    "https://www.linkedin.com/in/tom-paris-dev/", 
-                    "https://github.com/tomparis1"
-                  ]
+                    "https://www.linkedin.com/in/tom-paris-dev/",
+                    "https://github.com/tomparis1",
+                    "https://twitter.com/toomsahh"
+                  ],
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "FR"
+                  },
+                  "makesOffer": {
+                    "@id": "https://tomparis.dev/#service"
+                  }
                 },
                 {
                   "@type": "Service",
+                  "@id": "https://tomparis.dev/#service",
                   "name": "Développement Full-Stack Next.js & React",
-                  "description": "Conception et déploiement d'applications web modernes sur mesure. Expertise Next.js, React, TypeScript et services Back-end.",
+                  "description": "Conception et déploiement d'applications web modernes sur mesure. Expertise Next.js, React, TypeScript et services Back-end PHP/MySQL.",
                   "serviceType": "Développement Logiciel",
                   "provider": {
-                    "@type": "Person",
                     "@id": "https://tomparis.dev/#person"
                   },
-                  "areaServed": "Monde entier (Remote)"
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "International"
+                  },
+                  "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "serviceUrl": "https://tomparis.dev"
+                  }
+                },
+                {
+                  "@type": "ProfilePage",
+                  "@id": "https://tomparis.dev/#webpage",
+                  "url": "https://tomparis.dev",
+                  "name": "Tom Paris - Développeur Full-Stack",
+                  "about": {
+                    "@id": "https://tomparis.dev/#person"
+                  },
+                  "mainEntity": {
+                    "@id": "https://tomparis.dev/#person"
+                  }
                 }
               ]
-            }),
+            }).replace(/</g, '\\u003c'),
           }}
         />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+
         <ThemeProvider
             attribute="class"
             defaultTheme="dark"
