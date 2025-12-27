@@ -220,7 +220,7 @@ const cards = [
     title: "Site actuel",
     src: "/portfolio.webp",
     ctaText: "Demo",
-    ctaLink: "https://tomparis.vercel.app/",
+    ctaLink: "https://tomparis.dev",
       ctaTextGit: "Github",
       ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
       content: () => {

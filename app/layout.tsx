@@ -15,14 +15,14 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tomparis.vercel.app'), 
+  metadataBase: new URL('https://tomparis.dev'), 
   
   title: {
-    default: "Tom Paris - Développeur Full-Stack | Next.js, React & TypeScript",
+    default: "Tom Paris – Développeur Full-Stack | Next.js & React",
     template: "%s | Tom Paris Portfolio", 
   },
   
-  description: "Portfolio de Tom Paris. Développeur Full-Stack passionné. Spécialisé en applications web modernes (Next.js, React, TypeScript, Tailwind CSS) avec une solide base Back-end (PHP, MySQL).",
+  description: "Développeur Full-Stack Freelance. Spécialisé Next.js, React, TypeScript et Tailwind CSS. Expertise Back-end PHP/MySQL pour applications web modernes.",
   
   keywords: [
     'développeur full-stack', 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     'applications web modernes',
   ],
 
-  authors: [{ name: 'Tom Paris', url: 'https://tomparis.vercel.app' }],
+  authors: [{ name: 'Tom Paris', url: 'https://tomparis.dev' }],
   creator: 'Tom Paris',
   publisher: 'Tom Paris',
 
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://tomparis.vercel.app',
+    canonical: 'https://tomparis.dev',
   },
   
   openGraph: {
     title: 'Tom Paris - Développeur Full-Stack | Next.js, React & TypeScript',
     description: "Découvrez mon portfolio. Développement Full-Stack (Next.js, React, TypeScript) et Back-end (PHP, MySQL) pour des applications web modernes et performantes.",
-    url: 'https://tomparis.vercel.app', 
+    url: 'https://tomparis.dev', 
     siteName: 'Tom Paris - Portfolio Full-Stack',
     locale: 'fr_FR',
     type: 'website',
@@ -86,6 +86,10 @@ export const metadata: Metadata = {
     creator: '@toomsahh', 
     images: ['/og-image.png'], 
   },
+
+  verification: {
+    google: 'HzvP5qHb_S8d02e3Di5_Mz3NrjtGGmQF9lsyUUIual4',
+  },
 };
 
 export default function RootLayout({
@@ -94,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

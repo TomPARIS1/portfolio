@@ -6,7 +6,7 @@ Mon portfolio personnel, développé avec TypeScript, Next.js et Tailwind CSS, p
 
 ## 🚀 Démo
 
-👉 [Voir en ligne](https://tomparis.vercel.app)
+👉 [Voir en ligne](https://tomparis.dev)
 
 ---
 

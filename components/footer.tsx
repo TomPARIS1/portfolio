@@ -8,9 +8,9 @@ const Footer = () => {
     <footer className="w-full pt-20 pb-10 mb-[100px] md:mb-5" id="contact">
         <div className="flex flex-col items-center">
             
-            <h1 className="heading lg:max-w-[45vw]">
+            <h2 className="heading lg:max-w-[45vw]">
                 Envie de <span className="text-neutral-400">donner vie</span> à vos idées ?
-            </h1>
+            </h2>
             <p className="text-white-200 md:mt-10 my-5 text-center">Contactez-moi et voyons comment je peux vous aider à atteindre vos objectifs.</p>
             
             <ContactForm />

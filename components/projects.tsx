@@ -4,10 +4,10 @@ import ExpandableCardDemo from "@/components/expandable-card-grid";
 const Projects = () => {
   return (
     <div className="pt-14" id="projects">
-        <h1 className="heading">
+        <h2 className="heading">
             Mes {' '}
             <span className="text-neutral-400">projets récents</span>
-        </h1>
+        </h2>
         <div className="flex flex-wrap items-center justify-center px-4 gap-x-12 mt-14">
             <ExpandableCardDemo />
             {/*projects.map(({id, title, des, img, iconLists, link}) => (
