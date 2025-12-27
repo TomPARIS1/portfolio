@@ -99,6 +99,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://tomparis.dev/#person",
+                  "name": "Tom Paris",
+                  "url": "https://tomparis.dev",
+                  "jobTitle": "Développeur Full-Stack Freelance",
+                  "image": "https://tomparis.dev/profile.webp",
+                  "sameAs": [
+                    "https://www.linkedin.com/in/tom-paris-dev/", 
+                    "https://github.com/tomparis1"
+                  ]
+                },
+                {
+                  "@type": "Service",
+                  "name": "Développement Full-Stack Next.js & React",
+                  "description": "Conception et déploiement d'applications web modernes sur mesure. Expertise Next.js, React, TypeScript et services Back-end.",
+                  "serviceType": "Développement Logiciel",
+                  "provider": {
+                    "@type": "Person",
+                    "@id": "https://tomparis.dev/#person"
+                  },
+                  "areaServed": "Monde entier (Remote)"
+                }
+              ]
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
