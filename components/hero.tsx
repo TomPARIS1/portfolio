@@ -19,23 +19,27 @@ const Hero = () => {
                 <div
                     className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
                 >
-                    <h1 className="text-neutral-400 mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold text-center">
-                    <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-                        Bonjour, je suis
-                    </span>
-                    <br></br>
-                    <TypeAnimation
-                        sequence={[
-                        "Tom",
-                        1000,
-                        "Développeur web",
-                        1000,
-                        ]}
-                        wrapper="span"
-                        speed={50}
-                        repeat={Infinity}
-                    />
-                    </h1>
+                        <h1 className="text-neutral-400 mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold text-center">
+                        <span className="sr-only">
+                            Tom Paris – Développeur Full-Stack Freelance Next.js & React
+                        </span>
+                        
+                        <span className="text-white bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+                            Bonjour, je suis
+                        </span>
+                        <br></br>
+                        <TypeAnimation
+                            sequence={[
+                            "Tom",
+                            1000,
+                            "Développeur Web",
+                            1000,
+                            ]}
+                            wrapper="span"
+                            speed={50}
+                            repeat={Infinity}
+                        />
+                        </h1>
                     <p className="text-white text-base sm:text-lg mb-6 lg:text-xl text-center">
                         {`Transformer vos idées en expériences captivantes à l'aide de technologies modernes !`}
                     </p>
