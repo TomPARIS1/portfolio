@@ -227,13 +227,13 @@ const cards = [
       return (
         <div className="space-y-4">
           <p>
-            TanguyPlomberie est une vitrine digitale haute performance conçue pour un artisan plombier-chauffagiste, développée avec Next.js 14, TypeScript et Tailwind CSS. Ce projet repense la présence en ligne des artisans locaux en s'éloignant des templates génériques pour proposer une expérience utilisateur (UX) premium et rassurante.
+            TanguyPlomberie est une vitrine digitale haute performance conçue pour un artisan plombier-chauffagiste, développée avec Next.js 14, TypeScript et Tailwind CSS. Ce projet repense la présence en ligne des artisans locaux en s&apos;éloignant des templates génériques pour proposer une expérience utilisateur (UX) premium et rassurante.
           </p>
           <p>
-            Le site répond à un défi précis : convertir l'urgence en prise de contact immédiate. L'architecture a été pensée pour minimiser les frictions : appels à l'action stratégiques, formulaires contextuels et navigation intuitive guident l'utilisateur stressé vers une solution rapide.
+            Le site répond à un défi précis : convertir l&apos;urgence en prise de contact immédiate. L&apos;architecture a été pensée pour minimiser les frictions : appels à l&apos;action stratégiques, formulaires contextuels et navigation intuitive guident l&apos;utilisateur stressé vers une solution rapide.
           </p>
           <p>
-            Au-delà de l'esthétique, la performance est le moteur de l'acquisition client. Le site est optimisé pour le SEO Local, avec une structure sémantique rigoureuse ciblant spécifiquement la zone d'intervention (Villegouge/Gironde). Grâce au Server-Side Rendering (SSR) de Next.js, les pages chargent instantanément, garantissant des scores Lighthouse excellents (100/100 SEO), essentiels pour capter le trafic mobile en situation d'urgence.
+            Au-delà de l&apos;esthétique, la performance est le moteur de l&apos;acquisition client. Le site est optimisé pour le SEO Local, avec une structure sémantique rigoureuse ciblant spécifiquement la zone d&apos;intervention (Villegouge/Gironde). Grâce au Server-Side Rendering (SSR) de Next.js, les pages chargent instantanément, garantissant des scores Lighthouse excellents (100/100 SEO), essentiels pour capter le trafic mobile en situation d&apos;urgence.
           </p>
         </div>
       );
