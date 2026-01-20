@@ -97,30 +97,30 @@ export default function ExpandableCardDemo() {
                       {active.description}
                     </motion.p>
                   </div>
-                    <div className="flex flex-row gap-2">
-                        <motion.a
-                            layout
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            href={active.ctaLink}
-                            target="_blank"
-                            className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                        >
-                            {active.ctaText}
-                        </motion.a>
-                        <motion.a
-                            layout
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            href={active.ctaLinkGit}
-                            target="_blank"
-                            className="px-4 py-3 text-sm rounded-full font-bold bg-black-300 text-white"
-                        >
-                            {active.ctaTextGit}
-                        </motion.a>
-                    </div>
+                  <div className="flex flex-row gap-2">
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.ctaLink}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      {active.ctaText}
+                    </motion.a>
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.ctaLinkGit}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-black-300 text-white"
+                    >
+                      {active.ctaTextGit}
+                    </motion.a>
+                  </div>
 
                 </div>
                 <div className="pt-4 relative px-6">
@@ -216,14 +216,38 @@ export const CloseIcon = () => {
 
 const cards = [
   {
+    description: "TanguyPlomberie&Cie",
+    title: "Site vitrine artisan",
+    src: "/tanguyplomberie.webp",
+    ctaText: "Site",
+    ctaLink: "https://tanguy-plomberie.vercel.app",
+    ctaTextGit: "Github",
+    ctaLinkGit: "https://github.com/TomPARIS1/tanguy-plomberie",
+    content: () => {
+      return (
+        <div className="space-y-4">
+          <p>
+            TanguyPlomberie est une vitrine digitale haute performance conçue pour un artisan plombier-chauffagiste, développée avec Next.js 14, TypeScript et Tailwind CSS. Ce projet repense la présence en ligne des artisans locaux en s'éloignant des templates génériques pour proposer une expérience utilisateur (UX) premium et rassurante.
+          </p>
+          <p>
+            Le site répond à un défi précis : convertir l'urgence en prise de contact immédiate. L'architecture a été pensée pour minimiser les frictions : appels à l'action stratégiques, formulaires contextuels et navigation intuitive guident l'utilisateur stressé vers une solution rapide.
+          </p>
+          <p>
+            Au-delà de l'esthétique, la performance est le moteur de l'acquisition client. Le site est optimisé pour le SEO Local, avec une structure sémantique rigoureuse ciblant spécifiquement la zone d'intervention (Villegouge/Gironde). Grâce au Server-Side Rendering (SSR) de Next.js, les pages chargent instantanément, garantissant des scores Lighthouse excellents (100/100 SEO), essentiels pour capter le trafic mobile en situation d'urgence.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
     description: "Portfolio",
     title: "Site actuel",
     src: "/portfolio.webp",
     ctaText: "Demo",
     ctaLink: "https://tomparis.dev",
-      ctaTextGit: "Github",
-      ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
-      content: () => {
+    ctaTextGit: "Github",
+    ctaLinkGit: "https://github.com/TomPARIS1/portfolio",
+    content: () => {
       return (
         <div className="space-y-4">
           <p>
@@ -263,30 +287,30 @@ const cards = [
       );
     },
   },
-    {
-        description: "Itineris",
-        title: "Planificateur de voyage",
-        src: "/itineris.webp",
-        ctaText: "Demo",
-        ctaLink: "https://goitineris.vercel.app/",
-        ctaTextGit: "Github",
-        ctaLinkGit: "https://github.com/TomPARIS1/itineris",
-        content: () => {
-            return (
-              <div className="space-y-4">
-                <p>
-                  Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
-                </p>
-                <p>
-                  Elle permet de planifier et gérer ses voyages de manière intuitive : l&apos;utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
-                </p>
-                <p>
-                  L&apos;app intègre également Clerk pour l&apos;authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l&apos;organisation de leurs aventures.
-                </p>
-              </div>
-            );
-        },
+  {
+    description: "Itineris",
+    title: "Planificateur de voyage",
+    src: "/itineris.webp",
+    ctaText: "Demo",
+    ctaLink: "https://goitineris.vercel.app/",
+    ctaTextGit: "Github",
+    ctaLinkGit: "https://github.com/TomPARIS1/itineris",
+    content: () => {
+      return (
+        <div className="space-y-4">
+          <p>
+            Itineris est une application web développée avec Next.js, TypeScript, Tailwind CSS et Prisma, connectée à une base de données Neon PostgreSQL.
+          </p>
+          <p>
+            Elle permet de planifier et gérer ses voyages de manière intuitive : l&apos;utilisateur peut créer des voyages, ajouter des destinations, les visualiser sur une carte interactive ou un globe 3D, et suivre ses dépenses par catégorie.
+          </p>
+          <p>
+            L&apos;app intègre également Clerk pour l&apos;authentification sécurisée et offre une interface moderne, fluide et responsive, pensée pour accompagner les voyageurs dans toute l&apos;organisation de leurs aventures.
+          </p>
+        </div>
+      );
     },
+  },
   {
     description: "CVCheckr",
     title: "Analyseur de CV",
@@ -332,21 +356,5 @@ const cards = [
         </div>
       );
     },
-  },
-  {
-      description: "Application en développement",
-      title: "En cours...",
-      src: "/indev.webp",
-      ctaText: "Demo",
-      ctaLink: "https://github.com/TomPARIS1",
-      ctaTextGit: "Github",
-      ctaLinkGit: "https://github.com/TomPARIS1",
-      content: () => {
-          return (
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare molestie nisl quis ullamcorper. Nulla ultrices lectus urna, ut fringilla lectus volutpat a. Ut quam massa, feugiat sit amet arcu in, laoreet pharetra nibh.
-              </p>
-          );
-      },
   },
 ];
